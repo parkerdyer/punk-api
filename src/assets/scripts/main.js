@@ -6,7 +6,7 @@
 const API_ENDPOINT = 'https://api.punkapi.com/v2/beers';
 
 const button = document.querySelector('button');
-const app = document.getElementById('beers');
+const app = document.getElementsByClassName('beers');
 
 
 var request = new XMLHttpRequest();
@@ -14,7 +14,7 @@ var request = new XMLHttpRequest();
 request.open('GET', API_ENDPOINT, true);
 request.onload = function () {
 
-  
+
   var data = JSON.parse(this.response);
 
   if (request.status >= 200 && request.status < 400) {
